@@ -1,0 +1,12 @@
+<!ELEMENT Notas (Recordatorio*, Manuscrita*, Lista*)>
+<!ELEMENT Recordatorio (Fecha+, Tema+)>
+<!ELEMENT Fecha (#PCDATA)>
+<!ELEMENT Tema (#PCDATA)>
+<!ELEMENT Imagen (#PCDATA)>
+<!ELEMENT Comentario (#PCDATA)>
+<!ATTLIST Lista title CDATA #REQUIRED>
+<!ELEMENT color (#PCDATA)>
+<!ELEMENT tamanyo (#PCDATA)>
+<!ELEMENT Elemento1 (#PCDATA)>
+<!ELEMENT Elemento2 (#PCDATA)>
+<!ELEMENT Elemento3 (#PCDATA)>

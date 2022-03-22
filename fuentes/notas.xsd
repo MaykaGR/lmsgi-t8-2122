@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="Notas">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Recordatorio" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element ref="Manuscrita" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element ref="Lista" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="Recordatorio">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Fecha" minOccurs="1" maxOccurs="2" />
+            <xs:element ref="Tema" minOccurs="1" maxOccurs="5" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="Manuscrita">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Imagen" minOccurs="0" maxOccurs="2" />
+            <xs:element ref="Comentario" minOccurs="1" maxOccurs="2" />
+        </xs:sequence>
+        <xs:attribute name="title" type="xs:string" />
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="Lista">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Elemento1"  />
+            <xs:element ref="Elemento2"  />
+            <xs:element ref="Elemento3"  />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="Fecha" type="xs:date" />
+<xs:element name="Tema" type="xs:string" />
+<xs:element name="Imagen" type="xs:string"/>
+<xs:element name="Comentario" type="xs:string"/>
+<xs:element name="Elemento1" type="xs:date" />
+<xs:element name="Elemento2" type="xs:string" />
+<xs:element name="Elemento3" type="xs:positiveInteger" />
+</xs:schema>
